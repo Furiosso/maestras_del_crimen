@@ -1,0 +1,262 @@
+    @font-face {
+        font-family: Gotham-Book;
+        src: url(../logos/vectorial/fonts/gotham_book.otf);
+    }
+    
+     :root,
+    body {
+        margin: 0;
+        font-family: Gotham-Book;
+        --escarlata: rgb(154, 25, 23);
+        --negro: rgb(16, 24, 32);
+        box-sizing: border-box;
+        max-width: 100%;
+        color: var(--negro);
+    }
+    
+    nav {
+        width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 18%;
+        left: 33.33%;
+        width: fit-content;
+        z-index: 10;
+        color: var(--negro);
+        font-size: initial;
+        text-align: left;
+        background-color: white;
+        overflow: hidden;
+        height: 0px;
+    }
+    
+    .menu ul {
+        list-style-type: none;
+        text-align: left;
+        padding: 0;
+    }
+    
+    .menu li {
+        padding: .15em 2em;
+    }
+    
+    .menu li a:hover {
+        /* animation: rotar 3s; */
+        color: var(--escarlata);
+        cursor: pointer;
+    }
+    /* @keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+} */
+    
+    .casilla {
+        border: 1px solid var(--negro);
+        text-align: center;
+        font-size: 3.5em;
+        padding: 0.3em;
+    }
+    
+    .casilla:hover {
+        color: white;
+        background-color: var(--negro);
+        cursor: none;
+    }
+    
+    .borde {
+        border-top: 1px solid var(--negro);
+    }
+    
+    .mostrar {
+        height: 79.563px;
+        overflow: visible;
+        animation: desplegar .25s;
+    }
+    
+    @keyframes desplegar {
+        0% {
+            height: 0px;
+            overflow: hidden;
+        }
+        100% {
+            height: 79.563px;
+            overflow: visible;
+        }
+    }
+    
+    .replegar {
+        animation: replegar .25s;
+    }
+    
+    @keyframes replegar {
+        0% {
+            height: 79.563px;
+        }
+        25% {
+            height: 79.563px;
+        }
+        100% {
+            height: 0px;
+        }
+    }
+    
+    .imagen_principal {
+        width: 100%;
+    }
+    
+    header article {
+        font-size: 2em;
+        text-align: center;
+        padding: 1.5em 5em;
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    a:hover {
+        color: inherit;
+    }
+    
+    button {
+        background-color: var(--escarlata);
+        color: white;
+        border: 1px solid var(--escarlata);
+        font-size: inherit;
+        padding: .25em 2em;
+        margin-top: 1em;
+    }
+    
+    button:hover {
+        background-color: white;
+        color: var(--escarlata);
+        cursor: pointer;
+    }
+    
+    section {
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    
+    .entradas {
+        max-width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0;
+        padding-bottom: 1em;
+    }
+    
+    .entradas article {
+        text-align: center;
+        padding: 1em;
+    }
+    
+    article img,
+    .texto {
+        max-width: 90%;
+        cursor: pointer;
+    }
+    
+    .texto {
+        font-size: .85em;
+        padding: .85em;
+        margin: auto;
+    }
+    
+    #analisis {
+        background-color: var(--negro);
+    }
+    
+    #blog {
+        color: black;
+    }
+    
+    .zocalo {
+        max-width: 100%;
+        padding: 1.35em 0 1em 0;
+        font-size: 2em;
+    }
+    
+    .zocalo h1 {
+        margin: 0;
+    }
+    
+    .zocalo h1:hover {
+        cursor: pointer;
+    }
+    
+    footer {
+        max-width: 100%;
+        box-sizing: border-box;
+        background-color: var(--escarlata);
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        padding: .5em;
+    }
+    
+    @media screen and (max-width:600px) {
+        nav {
+            width: 100vw;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            height: 55px;
+        }
+        .casilla {
+            font-size: inherit;
+            line-height: 350%;
+            padding: 0;
+        }
+        header article {
+            font-size: inherit;
+            text-align: center;
+            padding: 1em 1.5em;
+        }
+        #analisis_1,
+        #analisis_2,
+        #blog_1,
+        #blog_2 {
+            display: none;
+        }
+        .entradas {
+            display: block;
+        }
+        .zocalo {
+            font-size: inherit;
+            padding: 1em 0 .75em 0;
+        }
+        footer {
+            font-size: inherit;
+            margin-bottom: 55.15px;
+        }
+        button {
+            padding: 0.25em 1em;
+            margin-top: .5em;
+        }
+        .menu {
+            position: fixed;
+            top: auto;
+            left: 0;
+            width: 100vw;
+            bottom: 55.15px;
+            display: block;
+        }
+        .menu li a {
+            border-bottom: .5px solid var(--escarlata);
+        }
+    }
